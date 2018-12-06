@@ -1,0 +1,3 @@
+November 29th, 2018
+
+I read in the new data sets into my Jupyter notebook and created their data frames. I then proceeded to make some graphs specifically for looking at the St. Paul during the summer and winter. This was done by combining the weather and crime data of St. Paul on the Date of the events. I had to change the Date name column of St. Paul so that they would merge onto it together. The tricky part of this was working with the timestamp. I had to make sure that the time stamps had the same hour so that they would merge together. This is different than the occurred time of the crime. I made all the dates have an hour timestamp of 00:00:00. This was also done for the Seattle and Seattle's weather.

@@ -1,0 +1,6 @@
+11/27/18
+
+I created two graphs that analyze the total data set of reported crimes in the day. I then split the data into an AM and PM section and then
+created two pie charts taht each slice analyzes how many crime reports were reported in that hour. I also created a small table to the side
+so people can see the percentage and the amount of reports in each hour. I also added a scroll button on the reports page taht can take a 
+user back to the top of the page.

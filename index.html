@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Seattle Weather and Crime Data</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<link  rel="stylesheet" type="text/css" href="css/style.css">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+	</head>
+
+	
+	<body>
+		<ul class="navbar">
+			<li><a class="navigation" href="index.html"> Home page</a></li>		
+			<li><a class="navigation" href="journals.html"> Check out the our Journal Entries</a>
+			<li><a class="navigation" href="report.html"> Our Report on the Seattle Area</a>
+		</ul>
+		
+
+		<h1> Seattle Weather and St. Paul Crime Data</h1>
+
+		<figure><img src="images/seattle.jpg"></figure>
+
+		<div>
+			<h3>Introduction to the Data</h3>
+			<br>
+			<br>
+			<p class='header'>Mitchell Petellin and Andrew Millan</p>
+			<br>
+			<p>This webpage has the journal entries of Mitchell Petellin and Andrew Millan. The journal entries are on one page, while the report of the data is on another. The data was gathered from the Seattle Government website as well as the National Centers for Environmental Information webstie. During our investigation, we added the city of St. Paul and its weather to our report so that we could compare the two cities in addition to the weather in St. Paul being significantly different than the weather in Seattle.</p>
+			<br>
+			
+				<ul>
+				During the report we look to answer the following questions:
+					<li>While comparing the two cities, how does weather play an effect into the crimerates throughout different times of the year?</li>
+					<li>How do the two cities compare or differ with their crime in certain areas of the city?</li>
+					<li>What are some of the similar times of day that crimes occur and is this consistent between the Midwest State and the Pacific Northwest State?</li>
+				</ul>
+			
+			<br>
+			<br>
+			<br>
+			<p> There are roughly five hundred thousand unique data points in the crime dataset and about four thousand points in the weather dataset for the Seattle data set. For the St. Paul data set, there were about one hundred and sixty thousand data points for crime and a little more than three thousand points for the St. Paul weather data set. The Seattle crime dataset consists of crimes recorded from 2008 until the present day when we first downloaded the data. The weather dataset is the weather everyday to the present, starting in January of 2008. The St. Paul crimes data starts in 2010 and goes until present day while the weather daata starts at the beginning of August 2014 until the present. For our direct comparisons between the two cities, we would look at the summers and winters of both respectively where there was data timestamps that overlapped. That way we would be doing a direct comparison for both cities.</p>
+			<br>
+			<p>Once we got all the data together, we were able to merge the respective weather and city data sets together. Because we started with only Seattle and its weather, we we did not combine all four data sets together. We did two seperate notebooks for each city but within each notebook we combined the two together so each weather day was matched up with the day of the crime. This allowed for our analysis to be percise when looking at the weather for given days and during the months when the crime was occuring. </p>
+		</div>
+		<h3>Some Definitions for Interpreting the Report:</h3>
+		<h4>Beat:</h4>
+		<p>According to Seattle's government web page, the description of the Beats are as follows. Seattle is divided into five geographic areas. Within those areas are the 5 precincts or police stations: North, East, South, West and Southwest. Precinct boundaries were determined through consideration of neighborhood boundaries, geographic and other natural boundaries.Each precinct contains smaller geographic areas called Sectors. There are 17 sectors total in the city.Each of these Sectors are divided into between 3 smaller sections called Beats (i.e. Ocean sector has three beats O1, O2, O3) These are the areas that individual patrol officers are assigned responsibility for.</p>
+		<br>
+		<br>
+		<h4>Car Prowl:</h4>
+		<p>The Seattle Government page explains Car Prowl as a theft when items are stolen from an individuals car. This may include, wallet, phone, bag, etc.</p>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<footer>
+		created by Mitchell Petellin and Andrew Millan
+		</footer>
+	</body>
+</html>

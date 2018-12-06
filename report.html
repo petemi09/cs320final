@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Report</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<link  rel="stylesheet" type="text/css" href="css/style.css">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+	</head>
+
+	<script>
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("myBtn").style.display = "block";
+			} else {
+				document.getElementById("myBtn").style.display = "none";
+			}
+		}
+		
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+		</script>
+
+
+	<body>
+
+	<button onclick="topFunction()" id="myBtn" class=imgSize title="Go to top"><img src="images/arrow.svg"></button>
+
+		<ul class="navbar">
+			<li><a class="navigation" href="index.html"> Home page</a></li>		
+			<li><a class="navigation" href="journals.html"> Check out the our Journal Entries</a>
+			<li><a class="navigation" href="report.html"> Our Report on the Seattle Area</a>
+		</ul>
+		<h1> Data Report</h1>
+		<figure>
+			<img src="images/seattle.jpg">
+		</figure>
+		<figure>
+			<img src="images/st.paul_skyline.jpg">
+		</figure>
+
+		<div>
+			<h3>Introduction to the Data</h3>
+			<br>
+			<br>
+			<p class='header'>Mitchell Petellin and Andrew Millan</p>
+			<br>
+			<p>This report has the link to the journal entries of Mitchell Petellin and Andrew Millan. The journal entries are on one page, while the report of the data is on another. The data was gathered from the Seattle Government website as well as the National Centers for Environmental Information webstie. During our investigation, we added the city of St. Paul and its weather to our report so that we could compare the two cities in addition to the weather in St. Paul being significantly different than the weather in Seattle. Also, the population in Seattle is roughly seven hundred thousand whereas in St. Paul it is around three hundred thousand. This is a large difference but we will be looking at percentages of certain crimes and the counts in respect to the weather. We are aware of this difference in population size as we progress through our report. </p>
+			<br>
+			
+				<ul>
+				During the report we look to answer the following questions:
+					<li>While comparing the two cities, how does weather play an effect into the crimerates throughout different times of the year?</li>
+					<li>How do the two cities compare or differ with their crime in certain areas of the city?</li>
+					<li>What are some of the similar times of day that crimes occur and is this consistent between the Midwest State and the Pacific Northwest State?</li>
+				</ul>
+			
+			<br>
+			<br>
+			<br>
+			<p> There are roughly five hundred thousand unique data points in the crime dataset and about four thousand points in the weather dataset for the Seattle data set. For the St. Paul data set, there were about one hundred and sixty thousand data points for crime and a little more than three thousand points for the St. Paul weather data set. The Seattle crime dataset consists of crimes recorded from 2008 until the present day when we first downloaded the data. The weather dataset is the weather everyday to the present, starting in January of 2008. The St. Paul crimes data starts in 2010 and goes until present day while the weather daata starts at the beginning of August 2014 until the present. For our direct comparisons between the two cities, we would look at the summers and winters of both respectively where there was data timestamps that overlapped. That way we would be doing a direct comparison for both cities.</p>
+			<br>
+			<p>Once we got all the data together, we were able to merge the respective weather and city data sets together. Because we started with only Seattle and its weather, we we did not combine all four data sets together. We did two seperate notebooks for each city but within each notebook we combined the two together so each weather day was matched up with the day of the crime. This allowed for our analysis to be percise when looking at the weather for given days and during the months when the crime was occuring. </p>
+		</div>
+
+
+			<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!
+			!!!!!!!!!!!!!!!!!!!!!!!!!!
+			!!!!!!!!!!!!!!!!!!!!!!!!!!
+			seattle stuff goes on left
+			!!!!!!!!!!!!!!!!!!!!!!!!!!
+			!!!!!!!!!!!!!!!!!!!!!!!!!!
+			!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+
+		<div>
+			<h3>First Graph</h3>
+
+			<div id="side_by_side">
+				<div class="picture">
+						<figure><img class="img1_3" src="images/district_map.PNG"></figure>
+				</div>
+				
+
+				<div class="map">
+					<figure><img class="img1_2" src="images/precinctmap.png"></figure>
+				</div>
+			</div>
+			<div id="side_by_side">
+				<div class="picture">
+					<figure><img class="img1_1" src="images/countByBeat.png" width="350"></figure>
+				</div>
+				<div class="map">
+					<figure><img class="img1_4" src="images/police_overview.png"></figure>
+				</div>
+			</div>
+			<p>In the above images we see a first comparison between the beats in Seattle and the police grids in St. Paul on the right. There are images of the two cities next to the charts to give an idea of where each beat or grid falls in respect to the city limits. Seattle has quite a bit fewer beats in comparison to St. Paul where there are almost ten times more police grids charted. In this starting chart we wanted to show the distribution of where most of the crime counts were occuring throughout the cities during the entire dataset. Just starting off, Seattle has a bit more of an uniform distribution compared to St. Paul where there is more of a normal distribution. We Continued digging into these attributes of the cities by looking at these specific areas to see what the distribution of crime is in each area.</p>
+			<div id="side_by_side">
+				<div class="picture">
+					<figure><img class="pie1" src="images/K3.png"></figure>
+				</div>
+				<div class="map">
+					<figure><img class="pie2" src="images/grid_stpaul.png"></figure>
+				</div>
+			<p>In the Seattle beat K3 was had the largest amount of crime in it during the entire history of the dataset. On the otherside, St. Paul's police grid number 105 was the clear winner with the highest crime count. In Seattle beat K3, the highest crime subcategory was Shoplifting with 33.8%. Car Prowl was second with 14.5% and Narcotis was third with 10.7%. That was an interesting thing to note was how high the percent of Narcotis was in respect to the other crimes. On the other hand, in St. Paul, theft was the crime that was significantly the highest. 79.7% of the crime during the history of the data set was theft. The dataset was from 2010 until the present so this is a significant amount to be occuring in the near past. Compared to Seattle, the Narcotic percentage is not nearly as high. It is 1.9% of the crime. This may be a result of Seattle being a port city and having a larger populaiton, while Minnesota is more in the central of the US and the Mississippi is the main waterway access.</p>
+					<figure><img class="vs" src="images/seattlevsStPaul.png"></figure>
+			</div>
+			
+			<br>
+
+			<p>In this final graph, there is a comparison on the count of crime throughout the year 2015 until the present. This is a grpah with Seattle in blue and St. Paul in orange. This shows the how the crime counts are changing throughout the recent years and how they compare with eachother. Unsuprisingly, Seattle has higher counts as their population size is much larger than St. Paul, but it is still not significantly larger. The scale for Seattle is on the right side of the graph and St. Paul is on the left y-axis. This gave us our starting point as we continued on through our investigation and looking towards answering our questions.</p>
+
+		</div>
+
+
+		<div>
+			<h3> St Paul</h3>
+				<div class="frist">
+					<figure><img class="pie3" src="images/crimeAM1stpaul.png"></figure>
+				
+					<figure><img class="pie4" src="images/crimePM1stpaul.png"></figure>
+				</div>
+					<p>These two pictures show in what hour the most crime happend</p>
+					<p>The two graphs above give a reprsentation of the the distribution of crime throughout the morning and the times associated with it during the dataset in both Seattle and St. Paul. The time that has the most crime for Seattle on the left is 12am which is the same for St. Paul. This makes sense to us as these would be done by people who hace gone out the night before and it occurs while the majority of people are at home sleeping. An interesting note, is that the second largest portion in the Seattle morning grpah is around 7am. This is around the time people are getting up and heading to work. This is also after there is much less crime during the earlier hours of the morning. On the contrary, in St. Paul, the crime does not seem to pick up until later in the mrning aroun 8-10am. This is generally the time that people are also headed off to work. This could mean that theifs may wait for the home to be empty before breaking in or there are more people to target on their walk to work in the streets.</p>
+				
+			</div>
+
+		<div>
+				<h3> Seattle </h3>
+				<figure><img class="pie5" src="images/crimeAMseattle.png"></figure>
+				<figure><img class="pie6" src="images/crimePMseattle.png"></figure>
+				<p>These following two photos show the distribution of the time in the afternoon and evening when crime was occurring. In these pie charts again we see that around the time people are coming home from work is when most of the crimes are reported to have happened. This is around 6pm for both Seattle and St. Paul. This could be because people are on their ways home as well as this is a time when the sun begins to set for a large part of the year. This earlier sunset may give criminals the cover of night that is needed or the ability to hide while they steal a car or bike. These charts are interesting to see as the times when crimes occur fairly often is when people are on their way to work or on their way home from work. </p>
+		</div>
+
+
+		<div class="heat">
+			<h3>HEAT MAPS</h3>
+			<div class="heat1">
+				<figure><img src="images/charts/heatmap.png"></figure>
+			</div>
+			<div class="heat2">
+				<figure><img src="images/charts/stPaul_heatmap.png"></figure>
+			</div>
+			<p>These heat maps can be tough to understand but there is some information here that can be of use. For starters, the X-axis is each day of the year 2015 and the interval is every 30 days or roughly a month. The y-axis is the occurred time that the crime was reported or roughly the time it occurred. Both the heat maps can support the pie charts from the previous analysis as during the year 2015, times when there was some consitent times of crime were during the hours of when people were communiting from work. Since each datapoint was timestamped, the way the grouping was done was by the minute of each. This creates a large amount of times that may be zero for one day but 3 for another. We decided to work with the year 2015 because this was the first year that both the Seattle and St. Paul crime and weather data sets overlapped. This allowed us to be able to compared the two farily evenly. Overall, these heatmaps really support what we have seen above in the pie charts about during what time of the day crime is occurring and how it is consistent throughout the year.</p>
+		</div>
+
+		<div>
+			<h3>Seattle Summer</h3>
+			<figure><img class="sum1" src="images/charts/2015_Seattle_Summer.png"></figure>
+			<h3>Seattle Winter</h3>
+			<figure><img class="win1" src="images/charts/2015_SeattleWinter.png"></figure>
+			<p>In the above charts we have the two cities side-by-side with their temperatures throughout the winter of 2014-2015. This part of the report we were interested in looking to see if the extreme weather of St. Paul would show us any change in crime vs the fairly calmer weather in Seattle. We were focused on the temepratures in this case and not so much as in the rainfall or snowfall. Both cities would have interesting data in this regard that could be added for future analysis. We see that St. Paul does seem to quite a bit colder in the winters than in Seattle. These graphs give a representation of the weatehr during the winter months of December 2014-February2015. We were using these months as they give an overall view of how the winter was in each respective city. </p>
+			<h5>above seattle: below st paul</h5>
+			<h3>St Paul Summer</h3>
+			<figure><img class="sum2" src="images/charts/2015_Summer.png"></figure>
+			<h3>St Paul Winter</h3>
+			<figure><img class="win2" src="images/charts/2015_Winter.png"></figure>
+			<p> On the contrary, the summer months, June, July, and August, were a bit more similar between the two cities. Similar to above, the Seattle weather stayed a bit more true to its mild winters while St. Paul was on the other extreme with being a fair bit warmer than its winters. These graphs were created from the combined data from each city and put side-by-side for comparison. </p>
+
+		</div>
+
+		<div>
+			<h3>WEATHER</h3>
+			
+			<figure><img class="w1" src="images/charts/seattle_summer.png"></figure>
+			<figure><img class="w2" src="images/charts/crime_Seattlewinter.png"></figure>
+			<p>Above we look closer at the summer months of the two cities and see what their crimerates are when the weather is niceer out and the temperatures are not so fridged for their crimminals. In Seattle, Car Prowl was the largest crime that was occurring during the warmer months of the year and the other crimes that were also occurring at high rates were other forms of theft. Car Prowl is a form of theft that seems to be the number one category that occurs in the dataset. Theft is also the number one item in St. Paul that occurs at a high rate. It is interesting to see how over this three month time period in the summer, St. Paul only has about 500 fewer theft instances than Seattle's car prowl statistic. This is interesting because of the population sizes in each city and how Seattle is over twice the size of St. Paul. Seattle does have a few more categories for crime but the max one is not too different than the St. Paul max. </p>
+			<h5>above is seattle : below is st paul</h5>
+			<figure><img class="w3" src="images/charts/st.paul_summer.png"></figure>
+			<figure><img class="w4" src="images/charts/st.paul_winter.png"></figure>
+			<p> Looking at the winter data we see some interesting points with the previous and current max crimminal categories. First, the Seattle counts show that even in the winter, crimminals are going to be just as active as in the summers and are not as deterred by the lower temperatures. However, in St. Paul it is a different story. There is a little shy of a 1000 count difference between summer and winter. The temperatures in the winter may be too extreme for the crimminals and this is consistent all across the board with the exception of a couple crime categories. The difference between the summer and winter crime counts in St. Paul is staggering and can potentially be attributed to the colder temperatures seen in the first graphs of this section. Seattle on the other hand has mild temperatures year round and as a result do not have the same drop in crime during winter months. </p>
+
+		</div>
+
+		<div>
+			<h3>crimes</h3>
+				<figure><img class="t2" src="images/crime_type_stpaul.png"></figure>
+				<figure><img class="t1" src="images/theft_stpaul.png"></figure>
+				<p>These two pie charts again support the claim that theft is the larget contributor to the reports in each of the cities datasets. Car Prowl is again the largest section of the dataset while on the St. Paul chart there is a section called Proactive Police Visit. This is where the police do a drive by or go to check up on a non emergency call. This was interesting to see that these were documented in the report and we did some further investigation to see if this may have an impact on the crime in the area. Looking at the Minnesota Government webpage, it shows that there about 41.2 crimes per 1000 people. Also, the score of St. Paul on a national scale had a score of 7.6/10. While Seattle had a score of 7.1/10. A higher score indicates a safer city. The score difference could be a result of the police patrols but can also be attributed to the population difference between the two cities. However, we ignored the Proactive Police Visit and investigated further the theft section of the chart.</p>
+				<figure><img class="t4" src="images/seattleOverallCrime.png"></figure>
+				<figure><img class="t3" src="images/theft_seattle_specific.png"></figure>
+				<p>These two charts here give a representation of what percent of the various kinds of theft are taking up the large portion in the main chart of the overall. In Seattle, if we look passed the Car Prowl section of the chart, we see that the next largest is Shoplifting. It takes up a generous 17.1% of the chart. Similar to in Minnesota, besides the general theft section, shoplifting takes up 10% of the chart. This could maybe indicate that the in larger cities, other than items being stolen from cars, the next best target are the local stores and items there to shoplift. It is an interesting piece as we would maybe assume that bikes would be ontop of that list with both cities being having an abudence of outdoor recreation areas.</p>
+				<figure><img class="d1" src="images/stpauldrugsfinal.png"></figure>
+				<figure><img class="d2" src="images/seattleDrugsFinal.png"></figure>
+				<p> In these final charts we look to compare the two cities narcotic percentages. For the Seattle overall chart, the narcotics total as around 3.4%, while the percent in St. Paul is slightly higher with it beeing around 6.5%. We looked at what was specifically being confiscated by the police and if the drugs were being sold, bought, or just possesion charges.</p>
+			
+			
+		</div>
+
+		<h3>Conclusion</h3>
+		<br>
+		<br>
+		<p>After conducting our report, we were able to do an adequet comparison between the crime and weather of Seattle with the crime and weather in St. Paul. We were able to see which areas in each city were the considered the "most" dangerous, or the areas with the highest crime count, and look specifically what was going on there. We followed this up with looking at Seattle and St. Paul throughout the entire year and what times it seemed that most of the crime was occurring. Our graphs built off of each other here and lead us into the our next investigation to see if weather had some sort effect on the crime rates. We noted that it did not seem to effect Seattle much but had a large effect in the St. Paul crime as there were a significant drop in crime during the cold months. Finally we looked into the overall distribution of crime within each city and the drug distribution. Theft was very prevelant in both cities with Shoplifting being the largest after general theft or car prowl. This was consitent in both cities which may lead us to believe that this may be the same in other cities. We would use that as further investigation for another datareport. And finally, looking at the drugs in both cities, it was interesting to note the highest count but also the possession of marijuana was an interesting note to look at.</p>
+
+
+		<ul>
+			Lingering Questions:
+			<li>What would the crime count be around the time right before Marijuana was made legal in Seattle? Did it drop off right before it happened or did it rise drastically?</li>
+			<li>Is there a genearl time that drug related crimes occur or what is the time distribution of these occurances?</li>
+			<li>For another time, we would think of maybe using some other kaggle data on another city, Massachusetts, and create a city heat map with latitude and longitude for accurate streat views. With that, where do most of the crimes in each city occurr?</li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<p>Looking back over our report, we feel that we adequetly answered our questions with multiple charts supporting one another and answering our questions. We were able to use the question as guides throughout the report and were successful in comparing the two cities.</p>
+		
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<footer>
+		created by Mitchell Petellin and Andrew Millan
+		</footer>
+	</body>
+</html>

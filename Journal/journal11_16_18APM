@@ -1,0 +1,4 @@
+November 16, 2018
+Andrew Millan
+
+Today I finished up creating some graphs. I looked into which beat has had more calls in during 2014 as well as looking at the distribution throughout 2014 for crimes. This was done by some groupby statements and greater than and less than statements. 
